@@ -87,9 +87,14 @@ li{
 
 .deleteTaskButton{
     border: none;
+    border-radius: 3px;
     background-color: white;
     box-shadow: 1px 1px 6px black;
     outline: none;
+}
+
+.deleteTaskButton:active{
+    box-shadow: 3px 3px 6px black;
 }
 
 .taskCheckBox{
