@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "OpenSans-ExtraBold";
+    font-weight: normal;
+    font-style: normal;
+    src: url("./fonts/OpenSans-ExtraBold.ttf");
+}
+
+@font-face{
+    font-family: "OpenSans-Regular";
+    font-weight: normal;
+    font-style: normal;
+    src: url("./fonts/OpenSans-Regular.ttf");
+}
+
+html{
+    background-image: url(./img/background.jpg);
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1{
+    font-family: OpenSans-ExtraBold;
+    font-size: 4vw;
+    color: white;
+    text-shadow: 3px 3px 6px black;
+    text-align: center;
+    margin-top: 9vw;
+}
+
+.TaskAddition{
+    margin: 1vw;
+}
+
+.TaskListSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#addTaskButton{
+    padding: 0.2vw;
+    font-family: OpenSans-Regular;
+}
+
+#taskInput{
+    padding: 0.2vw;
+    font-family: OpenSans-Regular;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    font-family: OpenSans-Regular;
+    font-size: 1vw;
+    color: rgb(19, 19, 19);
+    text-align: center;
+    padding: 0.3vw;
+    margin: 0.7vw;
+    background-color: white;
+    border-radius: 7px;
+    width: 30vw;
+    justify-content: center;
+    box-shadow: 2px 2px 6px black;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deleteTaskButton{
+    border: none;
+    background-color: white;
+    box-shadow: 1px 1px 6px black;
+    outline: none;
+}
+
+.taskCheckBox{
+    margin: 0.5vw;
+}
