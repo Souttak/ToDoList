@@ -8,7 +8,7 @@ function addTask(){
         nada, y me ahorra trabajo.
     */
     const checkbox = "<input type='checkbox' name='taskDone' class='taskCheckBox'>";
-    const deleteButton = "<button class='deleteTaskButton'><img src='img/bx-trash.svg' onclick='removeTask()'></button>";
+    const deleteButton = "<button class='deleteTaskButton'><img src='/img/bx-trash.svg' onclick='removeTask()'></button>";
 
     if(taskInput.value != "" && taskInput.value != null){
         var newTask = document.createElement("li");
