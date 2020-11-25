@@ -4,11 +4,11 @@ function addTask(){
 
     /* 
         Sé que hacer esto no es muy buena práctica, y es conveniente usar objetos generados con
-        document.createElement es mejor y más dinámico, pero para algo tan simple tampoco pasa
-        nada, y me ahorra trabajo.
+        document.createElement porque es mejor y más dinámico, pero para algo tan simple tampoco 
+        pasa nada, y me ahorra trabajo.
     */
     const checkbox = "<input type='checkbox' name='taskDone' class='taskCheckBox'>";
-    const deleteButton = "<button class='deleteTaskButton'><img src='/img/bx-trash.svg' onclick='removeTask()'></button>";
+    const deleteButton = "<button class='deleteTaskButton'><img src='/img/bx-trash.svg' onclick='removeTask(this)'></button>";
 
     if(taskInput.value != "" && taskInput.value != null){
         var newTask = document.createElement("li");
@@ -18,6 +18,5 @@ function addTask(){
 }
 
 function removeTask(task){
-    var taskList = document.getElementById("taskList");
-    taskList.removeChild(task);
+    task.closest("li").remove();
 }
