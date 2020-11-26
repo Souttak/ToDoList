@@ -34,6 +34,13 @@ body{
     justify-content: space-around;
 }
 
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 h1{
     font-family: OpenSans-ExtraBold;
     font-size: 4vw;
@@ -85,18 +92,36 @@ li{
     justify-content: space-between;
 }
 
-.deleteTaskButton{
+.deleteTaskButton, .shareTaskButton, .copyTaskButton, .fullscreenButton{
     border: none;
     border-radius: 3px;
     background-color: white;
     box-shadow: 1px 1px 6px black;
     outline: none;
+    margin-left: 5px;
+    width: 25px;
+    height: 25px;
 }
 
-.deleteTaskButton:active{
+.deleteTaskButton:active, .shareTaskButton:active, .copyTaskButton:active, .fullscreenButton:active{
     box-shadow: 3px 3px 6px black;
 }
 
 .taskCheckBox{
-    margin: 0.5vw;
+    margin-left: 0.5vw;
+}
+
+.buttonIMG{
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5px;
+}
+
+.liButtonsDiv{
+    height: 25px;
+}
+
+.fullscreenButton{
+    margin-top: 9vw;
+    margin-left: 2vw;
 }
