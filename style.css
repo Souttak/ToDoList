@@ -76,7 +76,6 @@ ul{
 
 li{
     font-family: OpenSans-Regular;
-    font-size: 1vw;
     color: rgb(19, 19, 19);
     text-align: center;
     padding: 0.3vw;
@@ -124,4 +123,10 @@ li{
 .fullscreenButton{
     margin-top: 9vw;
     margin-left: 2vw;
+}
+
+@media(max-width: 1000px){
+    li{
+        width: 40vw;
+    }
 }

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
 </head>
-<body>
+<body onload="loadTasks()">
 
     <header>
         <h1>TASK LIST</h1>
@@ -22,14 +22,6 @@
         </div>
 
         <ul id="taskList">
-            <li>
-                <input type='checkbox' name='taskDone' class='taskCheckBox'>testTask
-                <div class='liButtonsDiv'>
-                    <button class='copyTaskButton'><img class='buttonIMG' src='/img/bx-clipboard.svg' onclick=''></button>
-                    <button class='shareTaskButton'><img class='buttonIMG' src='/img/bx-share-alt.svg' onclick=''></button>
-                    <button class='deleteTaskButton'><img class='buttonIMG' src='/img/bx-trash.svg' onclick='removeTask(this)'></button>
-                </div>
-            </li>
         </ul>
     </section>
 
