@@ -7,8 +7,8 @@ window.localStorage;
 */
 const checkbox = "<input type='checkbox' name='taskDone' class='taskCheckBox'>";
 const deleteButton = "<button class='deleteTaskButton'><img class='buttonIMG' src='/img/bx-trash.svg' onclick='removeTask(this)'></button>";
-const shareButton = "<button class='shareTaskButton'><img class='buttonIMG' src='/img/bx-share-alt.svg' onclick=''></button>";
-const copyButton = "<button class='copyTaskButton'><img class='buttonIMG' src='/img/bx-clipboard.svg' onclick=''></button>";
+const shareButton = "<button class='shareTaskButton'><img class='buttonIMG' src='/img/bx-share-alt.svg' onclick='shareTask(this)'></button>";
+const copyButton = "<button class='copyTaskButton'><img class='buttonIMG' src='/img/bx-clipboard.svg' onclick='copyTask(this)'></button>";
 
 function addTask(){
     var taskList = document.getElementById("taskList");
@@ -37,4 +37,13 @@ function loadTasks(){
     if(storedTaskList != null){
         taskList.innerHTML = storedTaskList;
     }
+}
+
+function shareTask(reference){
+
+}
+
+function copyTask(reference){
+    var taskText = reference.closest("li").innerText;
+    navigator.clipboard.writeText(taskText);
 }
