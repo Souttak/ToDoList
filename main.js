@@ -6,9 +6,9 @@ document.createElement porque es mejor y más dinámico, pero para algo tan simp
 pasa nada, y me ahorra trabajo.
 */
 const checkbox = "<input type='checkbox' name='taskDone' class='taskCheckBox'>";
-const deleteButton = "<button class='deleteTaskButton'><img class='buttonIMG' src='/img/bx-trash.svg' onclick='removeTask(this)'></button>";
-const shareButton = "<button class='shareTaskButton'><img class='buttonIMG' src='/img/bx-share-alt.svg' onclick='shareTask(this)'></button>";
-const copyButton = "<button class='copyTaskButton'><img class='buttonIMG' src='/img/bx-clipboard.svg' onclick='copyTask(this)'></button>";
+const deleteButton = "<button class='deleteTaskButton' aria-label='Delete the task'><img class='buttonIMG' alt='Bin icon' src='./img/bx-trash.svg' onclick='removeTask(this)'></button>";
+const shareButton = "<button class='shareTaskButton' aria-label='Share the task'><img class='buttonIMG' alt='Share icon' src='./img/bx-share-alt.svg' onclick='shareTask(this)'></button>";
+const copyButton = "<button class='copyTaskButton' aria-label='Copy the task to clipboard'><img class='buttonIMG' alt='Clipboard icon' src='./img/bx-clipboard.svg' onclick='copyTask(this)'></button>";
 
 var isFullscreenEnabled = false;
 
@@ -54,11 +54,11 @@ function fullscreen(reference){
     if(document.fullscreenEnabled){
         if(isFullscreenEnabled){
             document.exitFullscreen();
-            reference.closest("header").innerHTML = "<h1>TASK LIST</h1>\n<button class='fullscreenButton'><img class='buttonIMG' src='/img/bx-fullscreen.svg' onclick='fullscreen(this)'></button>";
+            reference.closest("header").innerHTML = "<h1>TASK LIST</h1>\n<button class='fullscreenButton' aria-label='Activate/deactivate fullscreen'><img class='buttonIMG' alt='Fullscreen icon' src='./img/bx-fullscreen.svg' onclick='fullscreen(this)'></button>";
             isFullscreenEnabled = !isFullscreenEnabled;
         }else{
             document.getElementById("taskListMainPage").requestFullscreen();
-            reference.closest("header").innerHTML = "<h1>TASK LIST</h1>\n<button class='fullscreenButton'><img class='buttonIMG' src='/img/bx-exit-fullscreen.svg' onclick='fullscreen(this)'></button>";
+            reference.closest("header").innerHTML = "<h1>TASK LIST</h1>\n<button class='fullscreenButton' aria-label='Activate/deactivate fullscreen'><img class='buttonIMG' alt='Exit fullscreen icon' src='./img/bx-exit-fullscreen.svg' onclick='fullscreen(this)'></button>";
             isFullscreenEnabled = !isFullscreenEnabled;
         }
     }else{

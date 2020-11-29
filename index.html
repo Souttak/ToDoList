@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A webpage for listing tasks. Interactive todo list.">
     <title>TaskList</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css" media="screen, projection" aria-disabled="true">
+    <script src="main.js" defer async></script>
 </head>
 <body onload="loadTasks()">
 
     <header>
         <h1>TASK LIST</h1>
-        <button class='fullscreenButton'><img class='buttonIMG' src='/img/bx-fullscreen.svg' onclick='fullscreen(this)'></button>
+        <button class='fullscreenButton' aria-label='Activate/deactivate fullscreen'><img class='buttonIMG' alt='Fullscreen icon' src='./img/bx-fullscreen.svg' onclick='fullscreen(this)'></button>
     </header>
 
     <section class="TaskListSection">
 
         <div class="TaskAddition">
             <input type="text" id="taskInput" placeholder="Write your task here">
-            <button id="addTaskButton" type="submit" onclick="addTask()">Add task</button>
+            <button id="addTaskButton" type="submit" onclick="addTask()" aria-label='Add the task'>Add task</button>
         </div>
 
         <ul id="taskList">
